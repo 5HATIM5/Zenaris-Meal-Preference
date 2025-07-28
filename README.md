@@ -184,19 +184,6 @@ This application serves caregivers and family members who need to:
 - **Maintain Consistency**: Persistent data ensures information isn't lost
 - **Support Multiple Caregivers**: Shared information across different caregivers
 
-## 🚀 Deployment
-
-### Vercel
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect the Vite configuration
-3. Deploy with default settings
-
-### Netlify
-1. Connect your GitHub repository to Netlify
-2. Set build command: `npm run build`
-3. Set publish directory: `dist`
-4. Deploy
-
 ## 📝 License
 
 This project is created for the Zenaris coding challenge.
