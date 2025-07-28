@@ -4,7 +4,7 @@ A comprehensive web application for managing meal preferences and dietary requir
 
 ## 🌐 Live Demo
 
-Check out the live project: **[https://o-auth-sign-up-with-supabase.vercel.app/](https://o-auth-sign-up-with-supabase.vercel.app/)**
+Check out the live project: **[[Project Link](https://zenaris-meal-preference.vercel.app/)]**
 
 ## 🎯 Features
 
