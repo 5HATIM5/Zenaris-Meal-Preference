@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Plus, X, Edit3, Trash2 } from 'lucide-react';
+import { Plus, Edit3, Trash2 } from 'lucide-react';
 import { FoodItem, FoodCategory, FOOD_CATEGORIES } from '../types';
 
 interface FavoriteFoodsProps {
