@@ -2,6 +2,10 @@
 
 A comprehensive web application for managing meal preferences and dietary requirements for elderly individuals. Built with React, TypeScript, and TailwindCSS, this application helps caregivers easily track and manage dietary information.
 
+## 🌐 Live Demo
+
+Check out the live project: **[https://o-auth-sign-up-with-supabase.vercel.app/](https://o-auth-sign-up-with-supabase.vercel.app/)**
+
 ## 🎯 Features
 
 ### Core Functionality
