@@ -4,7 +4,7 @@ const STORAGE_KEY = 'zenaris-meal-preferences';
 
 export const savePreferences = (preferences: MealPreferences): void => {
   try {
-    const serialized = JSON.stringify(preferences, (key, value) => {
+    const serialized = JSON.stringify(preferences, (_, value) => {
       if (value instanceof Date) {
         return value.toISOString();
       }
