@@ -82,19 +82,19 @@ const DislikedFoods: React.FC<DislikedFoodsProps> = ({ foods, onUpdate }) => {
 
   return (
     <div className="card">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-red-100 rounded-full flex items-center justify-center">
-            <span className="text-2xl">👎</span>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 space-y-3 sm:space-y-0">
+        <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-red-100 rounded-full flex items-center justify-center">
+            <span className="text-lg sm:text-2xl">👎</span>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-zenaris-700">Disliked Foods</h2>
-            <p className="text-sm text-zenaris-500">Foods the person avoids or dislikes</p>
+            <h2 className="text-lg sm:text-xl font-semibold text-zenaris-700">Disliked Foods</h2>
+            <p className="text-xs sm:text-sm text-zenaris-500">Foods the person avoids or dislikes</p>
           </div>
         </div>
         <button
           onClick={() => setIsAdding(true)}
-          className="btn-secondary flex items-center space-x-2"
+          className="btn-secondary flex items-center justify-center space-x-2 w-full sm:w-auto"
         >
           <Plus className="w-4 h-4" />
           <span>Add Food</span>

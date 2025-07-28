@@ -58,8 +58,8 @@ function App() {
     <div className="min-h-screen bg-zenaris-50">
       <Header />
       
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <div className="space-y-8">
+      <main className="container mx-auto px-3 sm:px-4 py-4 sm:py-8 max-w-4xl">
+        <div className="space-y-4 sm:space-y-8">
           <PersonInfo 
             personName={preferences.personName}
             onUpdate={(personName) => updatePreferences({ personName })}

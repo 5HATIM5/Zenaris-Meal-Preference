@@ -11,13 +11,13 @@ const SpecialInstructions: React.FC<SpecialInstructionsProps> = ({ instructions,
 
   return (
     <div className="card">
-      <div className="flex items-center space-x-3 mb-6">
-        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
-          <FileText className="w-6 h-6 text-blue-600" />
+      <div className="flex items-center space-x-2 sm:space-x-3 mb-4 sm:mb-6">
+        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 rounded-full flex items-center justify-center">
+          <FileText className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
         </div>
         <div>
-          <h2 className="text-xl font-semibold text-zenaris-700">Special Instructions</h2>
-          <p className="text-sm text-zenaris-500">Additional dietary considerations and preferences</p>
+          <h2 className="text-lg sm:text-xl font-semibold text-zenaris-700">Special Instructions</h2>
+          <p className="text-xs sm:text-sm text-zenaris-500">Additional dietary considerations and preferences</p>
         </div>
       </div>
 

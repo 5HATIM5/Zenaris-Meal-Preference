@@ -8,15 +8,15 @@ interface PersonInfoProps {
 const PersonInfo: React.FC<PersonInfoProps> = ({ personName, onUpdate }) => {
   return (
     <div className="card">
-      <div className="flex items-center space-x-4 mb-6">
-        <div className="w-16 h-16 bg-zenaris-200 rounded-full flex items-center justify-center">
-          <User className="w-8 h-8 text-zenaris-600" />
+      <div className="flex items-center space-x-3 sm:space-x-4 mb-4 sm:mb-6">
+        <div className="w-12 h-12 sm:w-16 sm:h-16 bg-zenaris-200 rounded-full flex items-center justify-center">
+          <User className="w-6 h-6 sm:w-8 sm:h-8 text-zenaris-600" />
         </div>
         <div className="flex-1">
-          <h2 className="text-2xl font-semibold text-zenaris-700 mb-1">
+          <h2 className="text-xl sm:text-2xl font-semibold text-zenaris-700 mb-1">
             {personName || 'Enter Person\'s Name'}
           </h2>
-          <p className="text-zenaris-500">
+          <p className="text-sm sm:text-base text-zenaris-500">
             {personName 
               ? 'Here you can manage meal preferences and dietary requirements.'
               : 'Please enter the name of the person whose meal preferences you want to manage.'

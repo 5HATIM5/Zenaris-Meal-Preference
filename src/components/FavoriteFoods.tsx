@@ -70,19 +70,19 @@ const FavoriteFoods: React.FC<FavoriteFoodsProps> = ({ foods, onUpdate }) => {
 
   return (
     <div className="card">
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-3">
-          <div className="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
-            <span className="text-2xl">❤️</span>
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-6 space-y-3 sm:space-y-0">
+        <div className="flex items-center space-x-2 sm:space-x-3">
+          <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-100 rounded-full flex items-center justify-center">
+            <span className="text-lg sm:text-2xl">❤️</span>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-zenaris-700">Favorite Foods</h2>
-            <p className="text-sm text-zenaris-500">Foods the person enjoys eating</p>
+            <h2 className="text-lg sm:text-xl font-semibold text-zenaris-700">Favorite Foods</h2>
+            <p className="text-xs sm:text-sm text-zenaris-500">Foods the person enjoys eating</p>
           </div>
         </div>
         <button
           onClick={() => setIsAdding(true)}
-          className="btn-primary flex items-center space-x-2"
+          className="btn-primary flex items-center justify-center space-x-2 w-full sm:w-auto"
         >
           <Plus className="w-4 h-4" />
           <span>Add Food</span>
@@ -90,11 +90,11 @@ const FavoriteFoods: React.FC<FavoriteFoodsProps> = ({ foods, onUpdate }) => {
       </div>
 
       {isAdding && (
-        <div className="bg-zenaris-50 rounded-xl p-4 mb-6">
-          <h3 className="font-medium text-zenaris-700 mb-4">
+        <div className="bg-zenaris-50 rounded-xl p-3 sm:p-4 mb-4 sm:mb-6">
+          <h3 className="font-medium text-zenaris-700 mb-3 sm:mb-4">
             {editingId ? 'Edit Food' : 'Add New Food'}
           </h3>
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             <div>
               <label className="block text-sm font-medium text-zenaris-600 mb-2">
                 Food Name *
@@ -138,7 +138,7 @@ const FavoriteFoods: React.FC<FavoriteFoodsProps> = ({ foods, onUpdate }) => {
               />
             </div>
             
-            <div className="flex space-x-3">
+            <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-3">
               <button
                 onClick={editingId ? handleUpdate : handleAdd}
                 className="btn-primary flex-1"
@@ -163,39 +163,39 @@ const FavoriteFoods: React.FC<FavoriteFoodsProps> = ({ foods, onUpdate }) => {
           <p className="text-sm text-zenaris-400 mt-1">Click "Add Food" to get started.</p>
         </div>
       ) : (
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           {foods.map(food => (
-            <div key={food.id} className="bg-white border border-zenaris-200 rounded-xl p-4">
+            <div key={food.id} className="bg-white border border-zenaris-200 rounded-xl p-3 sm:p-4">
               <div className="flex items-start justify-between">
-                <div className="flex-1">
-                  <div className="flex items-center space-x-2 mb-2">
-                    <h3 className="font-medium text-zenaris-700">{food.name}</h3>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-wrap items-center gap-2 mb-2">
+                    <h3 className="font-medium text-zenaris-700 text-sm sm:text-base">{food.name}</h3>
                     {food.category && (
-                      <span className="tag tag-favorite">
+                      <span className="tag tag-favorite text-xs">
                         {FOOD_CATEGORIES.find(c => c.value === food.category)?.icon} 
-                        {FOOD_CATEGORIES.find(c => c.value === food.category)?.label}
+                        <span className="hidden sm:inline">{FOOD_CATEGORIES.find(c => c.value === food.category)?.label}</span>
                       </span>
                     )}
                   </div>
                   {food.notes && (
-                    <p className="text-sm text-zenaris-600">{food.notes}</p>
+                    <p className="text-xs sm:text-sm text-zenaris-600">{food.notes}</p>
                   )}
                   <p className="text-xs text-zenaris-400 mt-2">
                     Added {food.addedAt.toLocaleDateString()}
                   </p>
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex space-x-1 sm:space-x-2 ml-2">
                   <button
                     onClick={() => handleEdit(food.id)}
-                    className="p-2 text-zenaris-500 hover:text-zenaris-700 transition-colors"
+                    className="p-1.5 sm:p-2 text-zenaris-500 hover:text-zenaris-700 transition-colors"
                   >
-                    <Edit3 className="w-4 h-4" />
+                    <Edit3 className="w-3 h-3 sm:w-4 sm:h-4" />
                   </button>
                   <button
                     onClick={() => handleDelete(food.id)}
-                    className="p-2 text-red-500 hover:text-red-700 transition-colors"
+                    className="p-1.5 sm:p-2 text-red-500 hover:text-red-700 transition-colors"
                   >
-                    <Trash2 className="w-4 h-4" />
+                    <Trash2 className="w-3 h-3 sm:w-4 sm:h-4" />
                   </button>
                 </div>
               </div>
